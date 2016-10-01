@@ -1,0 +1,304 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		19C5E4BF1DA0125F005663E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */; };
+		19C5E4C11DA0125F005663E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4C01DA0125F005663E8 /* ViewController.swift */; };
+		19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C21DA0125F005663E8 /* Main.storyboard */; };
+		19C5E4C61DA0125F005663E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C51DA0125F005663E8 /* Assets.xcassets */; };
+		19C5E4C91DA0125F005663E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		19C5E4BB1DA0125F005663E8 /* ScrollableDatepicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableDatepicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		19C5E4C01DA0125F005663E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		19C5E4C31DA0125F005663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		19C5E4C51DA0125F005663E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		19C5E4C81DA0125F005663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		19C5E4CA1DA0125F005663E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		19C5E4B81DA0125F005663E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19C5E4B21DA0125E005663E8 = {
+			isa = PBXGroup;
+			children = (
+				19C5E4BD1DA0125F005663E8 /* ScrollableDatepicker */,
+				19C5E4BC1DA0125F005663E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		19C5E4BC1DA0125F005663E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4BB1DA0125F005663E8 /* ScrollableDatepicker.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		19C5E4BD1DA0125F005663E8 /* ScrollableDatepicker */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */,
+				19C5E4C01DA0125F005663E8 /* ViewController.swift */,
+				19C5E4C21DA0125F005663E8 /* Main.storyboard */,
+				19C5E4C51DA0125F005663E8 /* Assets.xcassets */,
+				19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */,
+				19C5E4CA1DA0125F005663E8 /* Info.plist */,
+			);
+			path = ScrollableDatepicker;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		19C5E4BA1DA0125F005663E8 /* ScrollableDatepicker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19C5E4CD1DA0125F005663E8 /* Build configuration list for PBXNativeTarget "ScrollableDatepicker" */;
+			buildPhases = (
+				19C5E4B71DA0125F005663E8 /* Sources */,
+				19C5E4B81DA0125F005663E8 /* Frameworks */,
+				19C5E4B91DA0125F005663E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollableDatepicker;
+			productName = ScrollableDatepicker;
+			productReference = 19C5E4BB1DA0125F005663E8 /* ScrollableDatepicker.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		19C5E4B31DA0125E005663E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0800;
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Dmitry Ivanenko";
+				TargetAttributes = {
+					19C5E4BA1DA0125F005663E8 = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 19C5E4B61DA0125E005663E8 /* Build configuration list for PBXProject "ScrollableDatepicker" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 19C5E4B21DA0125E005663E8;
+			productRefGroup = 19C5E4BC1DA0125F005663E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				19C5E4BA1DA0125F005663E8 /* ScrollableDatepicker */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		19C5E4B91DA0125F005663E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C5E4C91DA0125F005663E8 /* LaunchScreen.storyboard in Resources */,
+				19C5E4C61DA0125F005663E8 /* Assets.xcassets in Resources */,
+				19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		19C5E4B71DA0125F005663E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19C5E4C11DA0125F005663E8 /* ViewController.swift in Sources */,
+				19C5E4BF1DA0125F005663E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		19C5E4C21DA0125F005663E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C5E4C31DA0125F005663E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				19C5E4C81DA0125F005663E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		19C5E4CB1DA0125F005663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		19C5E4CC1DA0125F005663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		19C5E4CE1DA0125F005663E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ScrollableDatepicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Noxt.ScrollableDatepicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		19C5E4CF1DA0125F005663E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ScrollableDatepicker/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Noxt.ScrollableDatepicker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		19C5E4B61DA0125E005663E8 /* Build configuration list for PBXProject "ScrollableDatepicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C5E4CB1DA0125F005663E8 /* Debug */,
+				19C5E4CC1DA0125F005663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		19C5E4CD1DA0125F005663E8 /* Build configuration list for PBXNativeTarget "ScrollableDatepicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19C5E4CE1DA0125F005663E8 /* Debug */,
+				19C5E4CF1DA0125F005663E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 19C5E4B31DA0125E005663E8 /* Project object */;
+}
