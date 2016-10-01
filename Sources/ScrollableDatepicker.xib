@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollableDatepicker" customModule="ScrollableDatepicker" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionView" destination="bHB-sV-bER" id="6XY-vJ-LbQ"/>
+                <outlet property="view" destination="aOu-w9-3Qt" id="f42-ko-4jU"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="aOu-w9-3Qt">
+            <rect key="frame" x="0.0" y="0.0" width="240" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="bHB-sV-bER">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="5" id="XLp-AA-98S">
+                        <size key="itemSize" width="70" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Lpa-GQ-uhX"/>
+                        <outlet property="delegate" destination="-1" id="OwG-Ep-Gt4"/>
+                    </connections>
+                </collectionView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="bHB-sV-bER" firstAttribute="top" secondItem="aOu-w9-3Qt" secondAttribute="top" id="AcX-Y0-hSQ"/>
+                <constraint firstItem="bHB-sV-bER" firstAttribute="leading" secondItem="aOu-w9-3Qt" secondAttribute="leading" id="Dtv-LC-SA3"/>
+                <constraint firstAttribute="trailing" secondItem="bHB-sV-bER" secondAttribute="trailing" id="SaY-bf-xbF"/>
+                <constraint firstAttribute="bottom" secondItem="bHB-sV-bER" secondAttribute="bottom" id="n9p-Bp-2YM"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-216" y="-14"/>
+        </view>
+    </objects>
+</document>

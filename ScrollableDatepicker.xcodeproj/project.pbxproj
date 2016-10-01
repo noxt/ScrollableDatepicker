@@ -12,6 +12,11 @@
 		19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C21DA0125F005663E8 /* Main.storyboard */; };
 		19C5E4C61DA0125F005663E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C51DA0125F005663E8 /* Assets.xcassets */; };
 		19C5E4C91DA0125F005663E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */; };
+		19C5E4D21DA012A3005663E8 /* ScrollableDatepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */; };
+		19C5E4D41DA013AA005663E8 /* LoadableFromXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */; };
+		19C5E4D61DA0157E005663E8 /* ScrollableDatepicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */; };
+		19C5E4D91DA0189A005663E8 /* ScrollableDatepickerDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */; };
+		19C5E4DB1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		19C5E4C51DA0125F005663E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		19C5E4C81DA0125F005663E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		19C5E4CA1DA0125F005663E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableDatepicker.swift; sourceTree = "<group>"; };
+		19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadableFromXibView.swift; sourceTree = "<group>"; };
+		19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableDatepicker.xib; sourceTree = "<group>"; };
+		19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableDatepickerDayCell.swift; sourceTree = "<group>"; };
+		19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableDatepickerDayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,8 +48,9 @@
 		19C5E4B21DA0125E005663E8 = {
 			isa = PBXGroup;
 			children = (
-				19C5E4BD1DA0125F005663E8 /* ScrollableDatepicker */,
 				19C5E4BC1DA0125F005663E8 /* Products */,
+				19C5E4BD1DA0125F005663E8 /* ScrollableDatepicker */,
+				19C5E4D01DA01268005663E8 /* Sources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +65,50 @@
 		19C5E4BD1DA0125F005663E8 /* ScrollableDatepicker */ = {
 			isa = PBXGroup;
 			children = (
-				19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */,
-				19C5E4C01DA0125F005663E8 /* ViewController.swift */,
-				19C5E4C21DA0125F005663E8 /* Main.storyboard */,
-				19C5E4C51DA0125F005663E8 /* Assets.xcassets */,
-				19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */,
-				19C5E4CA1DA0125F005663E8 /* Info.plist */,
+				19C5E4DC1DA040C3005663E8 /* ApplicationLayer */,
+				19C5E4DD1DA040D6005663E8 /* PresentationLayer */,
+				19C5E4DE1DA040F0005663E8 /* Resources */,
 			);
 			path = ScrollableDatepicker;
+			sourceTree = "<group>";
+		};
+		19C5E4D01DA01268005663E8 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */,
+				19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */,
+				19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */,
+				19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */,
+				19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		19C5E4DC1DA040C3005663E8 /* ApplicationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */,
+				19C5E4CA1DA0125F005663E8 /* Info.plist */,
+			);
+			path = ApplicationLayer;
+			sourceTree = "<group>";
+		};
+		19C5E4DD1DA040D6005663E8 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */,
+				19C5E4C21DA0125F005663E8 /* Main.storyboard */,
+				19C5E4C01DA0125F005663E8 /* ViewController.swift */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		19C5E4DE1DA040F0005663E8 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				19C5E4C51DA0125F005663E8 /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,8 +170,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C5E4D61DA0157E005663E8 /* ScrollableDatepicker.xib in Resources */,
 				19C5E4C91DA0125F005663E8 /* LaunchScreen.storyboard in Resources */,
 				19C5E4C61DA0125F005663E8 /* Assets.xcassets in Resources */,
+				19C5E4DB1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib in Resources */,
 				19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,8 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				19C5E4D21DA012A3005663E8 /* ScrollableDatepicker.swift in Sources */,
 				19C5E4C11DA0125F005663E8 /* ViewController.swift in Sources */,
+				19C5E4D41DA013AA005663E8 /* LoadableFromXibView.swift in Sources */,
 				19C5E4BF1DA0125F005663E8 /* AppDelegate.swift in Sources */,
+				19C5E4D91DA0189A005663E8 /* ScrollableDatepickerDayCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +202,7 @@
 				19C5E4C31DA0125F005663E8 /* Base */,
 			);
 			name = Main.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 		19C5E4C71DA0125F005663E8 /* LaunchScreen.storyboard */ = {
@@ -158,6 +211,7 @@
 				19C5E4C81DA0125F005663E8 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			path = .;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -258,7 +312,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ScrollableDatepicker/Info.plist;
+				INFOPLIST_FILE = ScrollableDatepicker/ApplicationLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Noxt.ScrollableDatepicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -270,7 +325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = ScrollableDatepicker/Info.plist;
+				INFOPLIST_FILE = ScrollableDatepicker/ApplicationLayer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Noxt.ScrollableDatepicker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +353,7 @@
 				19C5E4CF1DA0125F005663E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
