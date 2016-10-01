@@ -8,8 +8,6 @@ ScrollableDatepicker
 	<a href="https://raw.githubusercontent.com/maxsokolov/tablekit/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
 
-Yet another datepicker for iOS.
-
 ![demo](Screenshots/screen.png)
 
 
