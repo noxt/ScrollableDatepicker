@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
   s.platform     = :ios, "9.0"
   s.source       = { :git => "https://github.com/noxt/ScrollableDatepicker.git", :tag => "#{s.version}" }
   s.source_files = "Sources"
-  s.resource_bundles = { "Sources" => ["Sources/*.xib"] }
+  s.resource_bundles = { "ScrollableDatepicker" => ["Sources/*.xib"] }
   s.requires_arc = true
 
 end
