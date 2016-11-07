@@ -15,8 +15,16 @@ public class ScrollableDatepicker: LoadableFromXibView {
   
   @IBOutlet public weak var collectionView: UICollectionView! {
     didSet {
-      let cellNib = UINib(nibName: ScrollableDatepickerDayCell.ClassName, bundle: nil)
-      collectionView.register(cellNib, forCellWithReuseIdentifier: ScrollableDatepickerDayCell.ClassName)
+        let podBundle = Bundle(for: ScrollableDatepicker.self)
+        let bundlePath = podBundle.path(forResource: String(describing: type(of: self)), ofType: "bundle")
+        var bundle:Bundle? = nil
+        
+        if bundlePath != nil {
+            bundle = Bundle(path: bundlePath!)
+        }
+        
+        let cellNib = UINib(nibName: ScrollableDatepickerDayCell.ClassName, bundle: bundle)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: ScrollableDatepickerDayCell.ClassName)
     }
   }
   
