@@ -33,7 +33,7 @@ public class LoadableFromXibView: UIView {
     var bundle:Bundle? = nil
     
     if bundlePath != nil {
-        bundle = Bundle(path: bundlePath!)
+      bundle = Bundle(path: bundlePath!)
     }
     
     let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
