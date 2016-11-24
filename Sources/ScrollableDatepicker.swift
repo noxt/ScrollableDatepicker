@@ -15,16 +15,16 @@ public class ScrollableDatepicker: LoadableFromXibView {
   
   @IBOutlet public weak var collectionView: UICollectionView! {
     didSet {
-      let podBundle = Bundle(for: ScrollableDatepicker.self)
-      let bundlePath = podBundle.path(forResource: String(describing: type(of: self)), ofType: "bundle")
-      var bundle:Bundle? = nil
-      
-      if bundlePath != nil {
-        bundle = Bundle(path: bundlePath!)
-      }
-      
-      let cellNib = UINib(nibName: ScrollableDatepickerDayCell.ClassName, bundle: bundle)
-      collectionView.register(cellNib, forCellWithReuseIdentifier: ScrollableDatepickerDayCell.ClassName)
+        let podBundle = Bundle(for: ScrollableDatepicker.self)
+        let bundlePath = podBundle.path(forResource: String(describing: type(of: self)), ofType: "bundle")
+        var bundle:Bundle? = nil
+        
+        if bundlePath != nil {
+            bundle = Bundle(path: bundlePath!)
+        }
+        
+        let cellNib = UINib(nibName: ScrollableDatepickerDayCell.ClassName, bundle: bundle)
+        collectionView.register(cellNib, forCellWithReuseIdentifier: ScrollableDatepickerDayCell.ClassName)
     }
   }
   
@@ -69,7 +69,11 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
     
     let date = dates[indexPath.row]
     let isWeekend = isWeekday(date)
-    let isSelected = date.timeIntervalSince1970 == selectedDate?.timeIntervalSince1970
+    
+    var isSelected = false
+    if let sDate = selectedDate {
+        isSelected = Int(date.timeIntervalSince1970) == Int(sDate.timeIntervalSince1970)
+    }
     
     cell.setup(date: date, isWeekend: isWeekend, isSelected: isSelected)
     
