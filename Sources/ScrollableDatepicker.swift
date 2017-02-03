@@ -11,7 +11,7 @@ public protocol ScrollableDatepickerDelegate: class {
 }
 
 
-public class ScrollableDatepicker: LoadableFromXibView {
+open class ScrollableDatepicker: LoadableFromXibView {
   
   @IBOutlet public weak var collectionView: UICollectionView! {
     didSet {

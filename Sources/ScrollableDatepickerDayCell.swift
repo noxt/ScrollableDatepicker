@@ -6,7 +6,7 @@
 import UIKit
 
 
-public class ScrollableDatepickerDayCell: UICollectionViewCell {
+open class ScrollableDatepickerDayCell: UICollectionViewCell {
   
   public let selectorColor = UIColor(red: 242.0/255.0, green: 93.0/255.0, blue: 28.0/255.0, alpha: 1.0)
   
