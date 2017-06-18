@@ -6,7 +6,7 @@
 import UIKit
 
 
-public class LoadableFromXibView: UIView {
+open class LoadableFromXibView: UIView {
   
   @IBOutlet public weak var view: UIView!
   
