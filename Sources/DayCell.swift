@@ -6,9 +6,7 @@
 import UIKit
 
 
-open class ScrollableDatepickerDayCell: UICollectionViewCell {
-
-    public let selectorColor = UIColor(red: 242.0/255.0, green: 93.0/255.0, blue: 28.0/255.0, alpha: 1.0)
+open class DayCell: UICollectionViewCell {
 
     @IBOutlet public weak var dateLabel: UILabel!
     @IBOutlet public weak var weekDayLabel: UILabel!
@@ -22,20 +20,26 @@ open class ScrollableDatepickerDayCell: UICollectionViewCell {
 
     // MARK: - Setup
 
-    func setup(date: Date, isWeekend: Bool, isSelected: Bool) {
+    func setup(date: Date, style: DayStyleConfiguration) {
         let formatter = DateFormatter()
 
         formatter.dateFormat = "dd"
         dateLabel.text = formatter.string(from: date)
+        dateLabel.font = style.dateTextFont ?? dateLabel.font
+        dateLabel.textColor = style.dateTextColor ?? dateLabel.textColor
 
         formatter.dateFormat = "EEE"
         weekDayLabel.text = formatter.string(from: date).uppercased()
+        weekDayLabel.font = style.weekDayTextFont ?? weekDayLabel.font
+        weekDayLabel.textColor = style.weekDayTextColor ?? weekDayLabel.textColor
 
         formatter.dateFormat = "MMMM"
         monthLabel.text = formatter.string(from: date).uppercased()
+        monthLabel.font = style.monthTextFont ?? monthLabel.font
+        monthLabel.textColor = style.monthTextColor ?? monthLabel.textColor
 
-        weekDayLabel.font = UIFont.systemFont(ofSize: 8, weight: isWeekend ? UIFontWeightBold : UIFontWeightThin)
-        selectorView.backgroundColor = isSelected ? selectorColor : UIColor.clear
+        selectorView.backgroundColor = style.selectorColor ?? UIColor.clear
+        backgroundColor = style.backgroundColor ?? backgroundColor
     }
-    
+
 }

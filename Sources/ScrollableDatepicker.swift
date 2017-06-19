@@ -17,14 +17,14 @@ open class ScrollableDatepicker: LoadableFromXibView {
         didSet {
             let podBundle = Bundle(for: ScrollableDatepicker.self)
             let bundlePath = podBundle.path(forResource: String(describing: type(of: self)), ofType: "bundle")
-            var bundle:Bundle? = nil
+            var bundle: Bundle? = nil
 
             if bundlePath != nil {
                 bundle = Bundle(path: bundlePath!)
             }
 
-            let cellNib = UINib(nibName: ScrollableDatepickerDayCell.ClassName, bundle: bundle)
-            collectionView.register(cellNib, forCellWithReuseIdentifier: ScrollableDatepickerDayCell.ClassName)
+            let cellNib = UINib(nibName: DayCell.ClassName, bundle: bundle)
+            collectionView.register(cellNib, forCellWithReuseIdentifier: DayCell.ClassName)
         }
     }
 
@@ -32,7 +32,7 @@ open class ScrollableDatepicker: LoadableFromXibView {
     // MARK: Configuration properties
 
     public weak var delegate: ScrollableDatepickerDelegate?
-    public var cellConfiguration: ((_ cell: ScrollableDatepickerDayCell, _ isWeekend: Bool, _ isSelected: Bool) -> Void)? {
+    public var cellConfiguration: ((_ cell: DayCell, _ isWeekend: Bool, _ isSelected: Bool) -> Void)? {
         didSet {
             collectionView.reloadData()
         }
@@ -47,7 +47,7 @@ open class ScrollableDatepicker: LoadableFromXibView {
             collectionView.reloadData()
         }
     }
-    public var numberOfDatesInOneScreen = 5 {
+    public var configuration = Configuration() {
         didSet {
             collectionView.reloadData()
         }
@@ -81,28 +81,31 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
     }
 
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ScrollableDatepickerDayCell.ClassName, for: indexPath) as! ScrollableDatepickerDayCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: DayCell.ClassName, for: indexPath) as! DayCell
 
         let date = dates[indexPath.row]
-        let isWeekend = isWeekday(date)
+        let isWeekendDate = isWeekday(date: date)
+        let isSelectedDate = isSelected(date: date)
 
-        var isSelected = false
-        if let sDate = selectedDate {
-            isSelected = Int(date.timeIntervalSince1970) == Int(sDate.timeIntervalSince1970)
-        }
-
-        cell.setup(date: date, isWeekend: isWeekend, isSelected: isSelected)
+        cell.setup(date: date, style: configuration.calculateDayStyle(isWeekend: isWeekendDate, isSelected: isSelectedDate))
 
         if let configuration = cellConfiguration {
-            configuration(cell, isWeekend, isSelected)
+            configuration(cell, isWeekendDate, isSelectedDate)
         }
 
         return cell
     }
 
-    private func isWeekday(_ date: Date) -> Bool {
+    private func isWeekday(date: Date) -> Bool {
         let day = NSCalendar.current.component(.weekday, from: date)
         return day == 1 || day == 7
+    }
+
+    private func isSelected(date: Date) -> Bool {
+        guard let selectedDate = selectedDate else {
+            return false
+        }
+        return Int(date.timeIntervalSince1970) == Int(selectedDate.timeIntervalSince1970)
     }
 
 }
@@ -129,7 +132,7 @@ extension ScrollableDatepicker: UICollectionViewDelegate {
 extension ScrollableDatepicker: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / CGFloat(numberOfDatesInOneScreen), height: collectionView.frame.height)
+        return CGSize(width: collectionView.frame.width / CGFloat(configuration.numberOfDatesInOneScreen), height: collectionView.frame.height)
     }
     
 }

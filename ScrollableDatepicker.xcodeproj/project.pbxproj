@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19091B381EF80F4B00292FA9 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19091B371EF80F4B00292FA9 /* Configuration.swift */; };
 		19C5E4BF1DA0125F005663E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */; };
 		19C5E4C11DA0125F005663E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4C01DA0125F005663E8 /* ViewController.swift */; };
 		19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4C21DA0125F005663E8 /* Main.storyboard */; };
@@ -15,11 +16,12 @@
 		19C5E4D21DA012A3005663E8 /* ScrollableDatepicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */; };
 		19C5E4D41DA013AA005663E8 /* LoadableFromXibView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */; };
 		19C5E4D61DA0157E005663E8 /* ScrollableDatepicker.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */; };
-		19C5E4D91DA0189A005663E8 /* ScrollableDatepickerDayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */; };
-		19C5E4DB1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */; };
+		19C5E4D91DA0189A005663E8 /* DayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19C5E4D81DA0189A005663E8 /* DayCell.swift */; };
+		19C5E4DB1DA018DE005663E8 /* DayCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 19C5E4DA1DA018DE005663E8 /* DayCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		19091B371EF80F4B00292FA9 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		19C5E4BB1DA0125F005663E8 /* ScrollableDatepicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollableDatepicker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		19C5E4BE1DA0125F005663E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		19C5E4C01DA0125F005663E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -30,8 +32,8 @@
 		19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableDatepicker.swift; sourceTree = "<group>"; };
 		19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadableFromXibView.swift; sourceTree = "<group>"; };
 		19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableDatepicker.xib; sourceTree = "<group>"; };
-		19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollableDatepickerDayCell.swift; sourceTree = "<group>"; };
-		19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScrollableDatepickerDayCell.xib; sourceTree = "<group>"; };
+		19C5E4D81DA0189A005663E8 /* DayCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DayCell.swift; sourceTree = "<group>"; };
+		19C5E4DA1DA018DE005663E8 /* DayCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DayCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,9 +79,10 @@
 			children = (
 				19C5E4D31DA013AA005663E8 /* LoadableFromXibView.swift */,
 				19C5E4D11DA012A3005663E8 /* ScrollableDatepicker.swift */,
+				19091B371EF80F4B00292FA9 /* Configuration.swift */,
 				19C5E4D51DA0157E005663E8 /* ScrollableDatepicker.xib */,
-				19C5E4D81DA0189A005663E8 /* ScrollableDatepickerDayCell.swift */,
-				19C5E4DA1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib */,
+				19C5E4D81DA0189A005663E8 /* DayCell.swift */,
+				19C5E4DA1DA018DE005663E8 /* DayCell.xib */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -173,7 +176,7 @@
 				19C5E4D61DA0157E005663E8 /* ScrollableDatepicker.xib in Resources */,
 				19C5E4C91DA0125F005663E8 /* LaunchScreen.storyboard in Resources */,
 				19C5E4C61DA0125F005663E8 /* Assets.xcassets in Resources */,
-				19C5E4DB1DA018DE005663E8 /* ScrollableDatepickerDayCell.xib in Resources */,
+				19C5E4DB1DA018DE005663E8 /* DayCell.xib in Resources */,
 				19C5E4C41DA0125F005663E8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,7 +192,8 @@
 				19C5E4C11DA0125F005663E8 /* ViewController.swift in Sources */,
 				19C5E4D41DA013AA005663E8 /* LoadableFromXibView.swift in Sources */,
 				19C5E4BF1DA0125F005663E8 /* AppDelegate.swift in Sources */,
-				19C5E4D91DA0189A005663E8 /* ScrollableDatepickerDayCell.swift in Sources */,
+				19C5E4D91DA0189A005663E8 /* DayCell.swift in Sources */,
+				19091B381EF80F4B00292FA9 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
