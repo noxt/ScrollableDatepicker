@@ -46,6 +46,10 @@ public struct Configuration {
     public var numberOfDatesInOneScreen: Int = 5
     
 
+    // MARK: - Initializer
+    public init() {
+    }
+
 
     // MARK: - Methods
 
@@ -79,6 +83,11 @@ public struct DayStyleConfiguration {
 
     public var selectorColor: UIColor?
     public var backgroundColor: UIColor?
+
+
+    // MARK: - Initializer
+    public init() {
+    }
 
 
     public func merge(with style: DayStyleConfiguration) -> DayStyleConfiguration {
