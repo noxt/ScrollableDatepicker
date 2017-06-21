@@ -141,7 +141,14 @@ extension ScrollableDatepicker: UICollectionViewDelegate {
 extension ScrollableDatepicker: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / CGFloat(configuration.numberOfDatesInOneScreen), height: collectionView.frame.height)
+        
+        var screenOrientation: UIInterfaceOrientation {
+            return UIApplication.shared.statusBarOrientation
+        }
+        
+        let cellWidth = UIInterfaceOrientationIsPortrait(screenOrientation) ? UIScreen.main.bounds.width : UIScreen.main.bounds.height
+        
+        return CGSize(width: cellWidth / CGFloat(configuration.numberOfDatesInOneScreen), height: collectionView.frame.height)
     }
     
 }
