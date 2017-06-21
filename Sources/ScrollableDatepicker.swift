@@ -69,6 +69,15 @@ open class ScrollableDatepicker: LoadableFromXibView {
         collectionView.reloadData()
     }
 
+    open override func layoutSubviews() {
+        super.layoutSubviews()
+
+        collectionView.reloadData()
+        DispatchQueue.main.async {
+            self.scrollToSelectedDate(animated: false)
+        }
+    }
+
 }
 
 
