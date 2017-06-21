@@ -8,6 +8,14 @@ import UIKit
 
 public struct Configuration {
 
+    public enum DaySizeCalculationStrategy {
+        case constantWidth(CGFloat)
+        case numberOfVisibleItems(Int)
+    }
+
+    public var daySizeCalculation: DaySizeCalculationStrategy = DaySizeCalculationStrategy.numberOfVisibleItems(5)
+
+
     // MARK: - Styles
 
     public var defaultDayStyle: DayStyleConfiguration = {
@@ -42,8 +50,12 @@ public struct Configuration {
 
 
     // MARK: - Configuration
-
-    public var numberOfDatesInOneScreen: Int = 5
+    @available(*, deprecated, message: "Use daySizeCalculation property")
+    public var numberOfDatesInOneScreen: Int = 5 {
+        didSet {
+            daySizeCalculation = .numberOfVisibleItems(numberOfDatesInOneScreen)
+        }
+    }
     
 
     // MARK: - Initializer

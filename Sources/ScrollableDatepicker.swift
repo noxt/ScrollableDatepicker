@@ -141,7 +141,16 @@ extension ScrollableDatepicker: UICollectionViewDelegate {
 extension ScrollableDatepicker: UICollectionViewDelegateFlowLayout {
 
     public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / CGFloat(configuration.numberOfDatesInOneScreen), height: collectionView.frame.height)
+        let itemWidth: CGFloat
+        switch configuration.daySizeCalculation {
+        case .constantWidth(let width):
+            itemWidth = width
+            break
+        case .numberOfVisibleItems(let count):
+            itemWidth = collectionView.frame.width / CGFloat(count)
+            break
+        }
+        return CGSize(width: itemWidth, height: collectionView.frame.height)
     }
     
 }

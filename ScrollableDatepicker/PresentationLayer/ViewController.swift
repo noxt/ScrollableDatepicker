@@ -28,6 +28,7 @@ class ViewController: UIViewController {
 
             // selected date customization
             configuration.selectedDayStyle.backgroundColor = UIColor(white: 0.9, alpha: 1)
+            configuration.daySizeCalculation = .numberOfVisibleItems(5)
 
             datepicker.configuration = configuration
         }
