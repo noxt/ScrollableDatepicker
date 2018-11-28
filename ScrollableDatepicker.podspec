@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "ScrollableDatepicker"
-  s.version      = "2.1.0"
+  s.version      = "2.2.0"
   s.summary      = "Yet another datepicker for iOS"
   s.homepage     = "https://github.com/noxt/ScrollableDatepicker"
   s.screenshots  = "https://github.com/noxt/ScrollableDatepicker/blob/master/Screenshots/screen.png?raw=true"

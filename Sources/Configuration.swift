@@ -21,13 +21,13 @@ public struct Configuration {
     public var defaultDayStyle: DayStyleConfiguration = {
         var configuration = DayStyleConfiguration()
 
-        configuration.dateTextFont = .systemFont(ofSize: 20, weight: UIFontWeightThin)
+        configuration.dateTextFont = .systemFont(ofSize: 20, weight: UIFont.Weight.thin)
         configuration.dateTextColor = .black
 
-        configuration.weekDayTextFont = .systemFont(ofSize: 8, weight: UIFontWeightThin)
+        configuration.weekDayTextFont = .systemFont(ofSize: 8, weight: UIFont.Weight.thin)
         configuration.weekDayTextColor = .black
 
-        configuration.monthTextFont = .systemFont(ofSize: 8, weight: UIFontWeightLight)
+        configuration.monthTextFont = .systemFont(ofSize: 8, weight: UIFont.Weight.light)
         configuration.monthTextColor = .gray
 
         configuration.selectorColor = .clear
@@ -38,7 +38,7 @@ public struct Configuration {
 
     public var weekendDayStyle: DayStyleConfiguration = {
         var configuration = DayStyleConfiguration()
-        configuration.weekDayTextFont = .systemFont(ofSize: 8, weight: UIFontWeightBold)
+        configuration.weekDayTextFont = .systemFont(ofSize: 8, weight: UIFont.Weight.bold)
         return configuration
     }()
 

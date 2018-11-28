@@ -2,8 +2,8 @@ ScrollableDatepicker
 ============
 
 <p align="left">
-	<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_3-compatible-4BC51D.svg?style=flat" alt="Swift 3 compatible" /></a>
-	<a href="https://cocoapods.org/pods/ScrollableDatepicker"><img src="https://img.shields.io/badge/pod-2.1.0-blue.svg" alt="CocoaPods compatible" /></a>
+	<a href="https://developer.apple.com/swift"><img src="https://img.shields.io/badge/Swift_4.2-compatible-4BC51D.svg?style=flat" alt="Swift 4.2 compatible" /></a>
+	<a href="https://cocoapods.org/pods/ScrollableDatepicker"><img src="https://img.shields.io/badge/pod-2.2.0-blue.svg" alt="CocoaPods compatible" /></a>
 	<img src="https://img.shields.io/badge/platform-iOS-blue.svg?style=flat" alt="Platform iOS" />
 	<a href="https://raw.githubusercontent.com/maxsokolov/tablekit/master/LICENSE"><img src="http://img.shields.io/badge/license-MIT-blue.svg?style=flat" alt="License: MIT" /></a>
 </p>
@@ -21,7 +21,7 @@ An [example ViewController](https://github.com/noxt/ScrollableDatepicker/blob/ma
 Add the following line to your Podfile:
 
 ```ruby
-pod 'ScrollableDatepicker', '~> 2.1'
+pod 'ScrollableDatepicker', '~> 2.2'
 ```
 
 Then run the following in the same directory as your Podfile:
@@ -55,7 +55,7 @@ Depending on the state of the cell, its style is composed of the default and app
 - Number of dates in one screen
 
 
-### Example 
+### Example
 
 ![demo](Screenshots/screen-customization.png)
 

@@ -57,11 +57,7 @@ open class ScrollableDatepicker: LoadableFromXibView {
     // MARK: Methods
 
     public func scrollToSelectedDate(animated: Bool) {
-        guard let selectedDate = self.selectedDate else {
-            return
-        }
-
-        guard let index = dates.index(where: { Int($0.timeIntervalSince1970) == Int(selectedDate.timeIntervalSince1970) }) else {
+        guard let index = dates.index(where: isSelected) else {
             return
         }
 
@@ -106,15 +102,14 @@ extension ScrollableDatepicker: UICollectionViewDataSource {
     }
 
     private func isWeekday(date: Date) -> Bool {
-        let day = NSCalendar.current.component(.weekday, from: date)
-        return day == 1 || day == 7
+        return Calendar.current.isDateInWeekend(date)
     }
 
     private func isSelected(date: Date) -> Bool {
         guard let selectedDate = selectedDate else {
             return false
         }
-        return Int(date.timeIntervalSince1970) == Int(selectedDate.timeIntervalSince1970)
+        return Calendar.current.isDate(date, inSameDayAs: selectedDate)
     }
 
 }

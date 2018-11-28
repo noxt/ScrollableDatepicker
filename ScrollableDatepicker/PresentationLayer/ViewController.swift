@@ -54,6 +54,12 @@ class ViewController: UIViewController {
         formatter.dateFormat = "dd MMMM YYYY"
         selectedDateLabel.text = formatter.string(from: selectedDate)
     }
+    
+    @IBAction func goToCurrentDate(_ sender: UIButton) {
+        datepicker.selectedDate = Date()
+        datepicker.scrollToSelectedDate(animated: true)
+        showSelectedDate()
+    }
 
 }
 

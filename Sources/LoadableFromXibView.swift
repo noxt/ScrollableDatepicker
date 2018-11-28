@@ -36,7 +36,7 @@ open class LoadableFromXibView: UIView {
         }
 
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
-        view = nib.instantiate(withOwner: self, options: nil).first as! UIView
+        view = nib.instantiate(withOwner: self, options: nil).first as? UIView
         addSubview(view)
 
         view.translatesAutoresizingMaskIntoConstraints = false
