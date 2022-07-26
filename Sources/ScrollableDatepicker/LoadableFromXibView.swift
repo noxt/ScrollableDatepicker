@@ -10,7 +10,6 @@ open class LoadableFromXibView: UIView {
 
     @IBOutlet public weak var view: UIView!
 
-
     // MARK: - Inits
 
     override public init(frame: CGRect) {
@@ -34,9 +33,15 @@ open class LoadableFromXibView: UIView {
         if bundlePath != nil {
             bundle = Bundle(path: bundlePath!)
         }
-
+        #if SWIFT_PACKAGE
+        let nib = UINib(nibName: String(describing: type(of: self)), bundle: .module)
+        view = nib.instantiate(withOwner: self, options: nil).first as? UIView
+        #else
         let nib = UINib(nibName: String(describing: type(of: self)), bundle: bundle)
         view = nib.instantiate(withOwner: self, options: nil).first as? UIView
+        #endif
+       
+        
         addSubview(view)
 
         view.translatesAutoresizingMaskIntoConstraints = false

@@ -18,13 +18,20 @@ open class ScrollableDatepicker: LoadableFromXibView {
             let podBundle = Bundle(for: ScrollableDatepicker.self)
             let bundlePath = podBundle.path(forResource: String(describing: type(of: self)), ofType: "bundle")
             var bundle: Bundle? = nil
-
+#if SWIFT_PACKAGE
+            collectionView.register(UINib(nibName: DayCell.ClassName, bundle: .module),
+                                    forCellWithReuseIdentifier: DayCell.ClassName)
+#else
             if bundlePath != nil {
                 bundle = Bundle(path: bundlePath!)
             }
-
             let cellNib = UINib(nibName: DayCell.ClassName, bundle: bundle)
             collectionView.register(cellNib, forCellWithReuseIdentifier: DayCell.ClassName)
+#endif
+          
+            
+            
+           
         }
     }
 
